@@ -1,5 +1,14 @@
-body {
+ @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
   margin: 0;
+  font-size: 20px;
+  font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +19,162 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+/* slider.css */
+
+.navi-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.navi-button {
+  margin-right: 1rem;
+  color: black;
+  border: 2px solid gray;
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navi-button:hover {
+  background-color: #d1d5db; /* Equivalent to Tailwind's bg-gray-300 */
+}
+
+.sales-banner {
+  background-color: black; /* Light green */
+  padding: 0.5rem;
+  width: 55%;
+  margin: 0 auto;
+  border-radius: 0.375rem; /* Equivalent to Tailwind's rounded-md */
+}
+
+.sales-banner h3 {
+  color: #dc2626; /* Equivalent to Tailwind's text-red-600 */
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.image-container img {
+  border-radius: 0.375rem; /* Equivalent to Tailwind's rounded-md */
+  box-shadow: 0 4px 6px rgba(75, 85, 99, 0.5); /* Equivalent to Tailwind's shadow-lg shadow-gray-600 */
+  width: 70%;
+  height: auto;
+}
+
+/* slider.css */
+.slider-container {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.slide {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-inactive {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.slide-img {
+  width: 100%;
+}
+
+.slide-text {
+  position: absolute;
+  top: 12rem; /* Adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+}
+
+.dots-container {
+  display: flex;
+  position: absolute;
+  bottom: 3rem; /* Adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  margin-right: 1rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px dotted black; /* Dotted border */
+}
+
+.dot-active {
+  background-color: #86efac; /* Light green */
+}
+
+.dot-inactive {
+  background-color: white;
+}
+
+
+
+.buttons-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #e9eaeb;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 1.5rem;
+    top: 8rem; /* Adjust as necessary */
+  }
+  
+  .dots-container {
+    bottom: 2rem; /* Adjust as necessary */
+  }
+  
+  .btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
 }
